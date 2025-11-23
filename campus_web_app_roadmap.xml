@@ -1,0 +1,73 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="CampusWebAppRoadmap" name="Campus Web App Roadmap">
+    <mxGraphModel dx="727" dy="356" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <!-- Main App Title -->
+        <mxCell id="2" value="Campus Web App" style="text;html=1;fontSize=18;fontStyle=1;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="240" y="40" width="180" height="40" as="geometry"/>
+        </mxCell>
+        <!-- User Auth Module -->
+        <mxCell id="3" value="User Auth (OAuth/OTP)" style="swimlane;html=1;fillColor=#f0f8ff;strokeColor=#325d79;" vertex="1" parent="1">
+          <mxGeometry x="50" y="120" width="170" height="60" as="geometry"/>
+        </mxCell>
+        <!-- Hostel Selection Module -->
+        <mxCell id="4" value="Hostel Selection" style="swimlane;html=1;fillColor=#f7fee3;strokeColor=#538d22;" vertex="1" parent="1">
+          <mxGeometry x="290" y="120" width="170" height="60" as="geometry"/>
+        </mxCell>
+        <!-- Placement Calendar -->
+        <mxCell id="5" value="Placement Calendar" style="swimlane;html=1;fillColor=#eef6fd;strokeColor=#22538d;" vertex="1" parent="1">
+          <mxGeometry x="530" y="120" width="170" height="60" as="geometry"/>
+        </mxCell>
+        <!-- Food Ordering -->
+        <mxCell id="6" value="Food Ordering" style="swimlane;html=1;fillColor=#fff1e3;strokeColor=#c97d60;" vertex="1" parent="1">
+          <mxGeometry x="140" y="220" width="170" height="60" as="geometry"/>
+        </mxCell>
+        <!-- Buy-Sell Marketplace -->
+        <mxCell id="7" value="Buy-Sell Marketplace" style="swimlane;html=1;fillColor=#e3f6ff;strokeColor=#228d63;" vertex="1" parent="1">
+          <mxGeometry x="390" y="220" width="170" height="60" as="geometry"/>
+        </mxCell>
+        <!-- Admin Dashboard -->
+        <mxCell id="8" value="Admin Dashboard" style="swimlane;html=1;fillColor=#fdfde3;strokeColor=#dcbe63;" vertex="1" parent="1">
+          <mxGeometry x="600" y="220" width="170" height="60" as="geometry"/>
+        </mxCell>
+        <!-- Notifications -->
+        <mxCell id="9" value="Notifications (Push/Email)" style="swimlane;html=1;fillColor=#fff3f3;strokeColor=#8d227b;" vertex="1" parent="1">
+          <mxGeometry x="290" y="320" width="170" height="60" as="geometry"/>
+        </mxCell>
+        <!-- Relationships -->
+        <mxCell id="10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#8665b8;" edge="1" parent="1" source="3" target="4">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#8665b8;" edge="1" parent="1" source="4" target="2">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#8665b8;" edge="1" parent="1" source="3" target="2">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#8665b8;" edge="1" parent="1" source="4" target="5">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#8665b8;" edge="1" parent="1" source="2" target="6">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#8665b8;" edge="1" parent="1" source="2" target="7">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#8665b8;" edge="1" parent="1" source="2" target="8">
+        	<mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#8665b8;" edge="1" parent="1" source="6" target="9">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#8665b8;" edge="1" parent="1" source="7" target="9">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#8665b8;" edge="1" parent="1" source="5" target="9">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
