@@ -1,7 +1,8 @@
 import { ReactNode } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { Calendar, ShoppingBag, UtensilsCrossed, Home, User, LogOut, Menu } from 'lucide-react';
+import { Calendar, ShoppingBag, UtensilsCrossed, Home, User, LogOut, Menu, Sun, Moon } from 'lucide-react';
 import { useAuth } from '../contexts/AuthContext';
+import { useTheme } from '../contexts/ThemeContext';
 import { Button } from './ui/button';
 import { Sheet, SheetContent, SheetTrigger } from './ui/sheet';
 import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar';
@@ -14,6 +15,7 @@ export function Layout({ children }: LayoutProps) {
   const location = useLocation();
   const navigate = useNavigate();
   const { user, logout } = useAuth();
+  const { theme, toggleTheme } = useTheme();
 
   const navItems = [
     { path: '/dashboard', icon: Home, label: 'Dashboard' },
@@ -82,20 +84,38 @@ export function Layout({ children }: LayoutProps) {
             </Sheet>
             <h1 className="font-semibold">Campus Hub</h1>
           </div>
-          <Link to="/profile">
-            <Avatar className="size-8">
-              <AvatarImage src={user?.profilePicture} />
-              <AvatarFallback>{user?.name.charAt(0)}</AvatarFallback>
-            </Avatar>
-          </Link>
+          <div className="flex items-center gap-2">
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={toggleTheme}
+              className="size-10"
+            >
+              {theme === 'light' ? <Moon className="size-5" /> : <Sun className="size-5" />}
+            </Button>
+            <Link to="/profile">
+              <Avatar className="size-8">
+                <AvatarImage src={user?.profilePicture} />
+                <AvatarFallback>{user?.name.charAt(0)}</AvatarFallback>
+              </Avatar>
+            </Link>
+          </div>
         </div>
       </div>
 
       <div className="flex">
         {/* Desktop Sidebar */}
         <aside className="hidden lg:flex flex-col w-64 border-r bg-card min-h-screen sticky top-0">
-          <div className="p-6">
+          <div className="p-6 flex items-center justify-between">
             <h1 className="font-semibold text-xl">Campus Hub</h1>
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={toggleTheme}
+              className="size-9"
+            >
+              {theme === 'light' ? <Moon className="size-5" /> : <Sun className="size-5" />}
+            </Button>
           </div>
           
           <nav className="flex-1 px-4 space-y-2">

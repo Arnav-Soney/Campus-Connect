@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Layout } from '../components/Layout';
+import { useTheme } from '../contexts/ThemeContext';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card';
 import { Button } from '../components/ui/button';
 import { Badge } from '../components/ui/badge';
@@ -78,6 +79,7 @@ export default function FoodOrdering() {
   const [selectedRestaurant, setSelectedRestaurant] = useState(RESTAURANTS[0]);
   const [cart, setCart] = useState<CartItem[]>([]);
   const [selectedCategory, setSelectedCategory] = useState('all');
+  const { theme } = useTheme();
 
   const addToCart = (item: typeof RESTAURANTS[0]['menu'][0]) => {
     setCart(prev => {
@@ -129,8 +131,8 @@ export default function FoodOrdering() {
   return (
     <Layout>
       <div className="p-4 lg:p-8 pb-20 lg:pb-8">
-        <div className="mb-6">
-          <h1 className="text-3xl mb-2">Night Food Ordering</h1>
+        <div className={`mb-6 p-6 rounded-xl ${theme === 'dark' ? 'bg-gradient-to-r from-orange-500/10 via-yellow-500/10 to-amber-500/10 border border-yellow-500/20' : ''}`}>
+          <h1 className={`text-3xl mb-2 ${theme === 'dark' ? 'bg-gradient-to-r from-orange-400 via-yellow-400 to-amber-400 bg-clip-text text-transparent' : ''}`}>Night Food Ordering</h1>
           <p className="text-muted-foreground">Order from restaurants open late night</p>
         </div>
 
