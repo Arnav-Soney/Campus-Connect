@@ -9,13 +9,13 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '.
 import { toast } from 'sonner';
 
 const HOSTELS = [
-  'Hostel 1',
-  'Hostel 2',
-  'Hostel 3',
-  'Hostel 4',
-  'Hostel 5',
-  'Hostel 6',
-  'Girls Hostel 14',
+  'Hostel A',
+  'Hostel B',
+  'Hostel C',
+  'Hostel D',
+  'Hostel E',
+  'Hostel F',
+  'Girls Hostel 1',
   'Girls Hostel 2',
   'PG Accommodation'
 ];
@@ -94,7 +94,7 @@ export default function Signup() {
               <Label htmlFor="hostel">Select Your Hostel</Label>
               <Select
                 value={formData.hostel}
-                onValueChange={(value: any) => setFormData({ ...formData, hostel: value })}
+                onValueChange={(value) => setFormData({ ...formData, hostel: value })}
               >
                 <SelectTrigger id="hostel">
                   <SelectValue placeholder="Choose your hostel" />
